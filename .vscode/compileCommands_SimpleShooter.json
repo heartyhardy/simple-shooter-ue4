@@ -1,0 +1,37 @@
+[
+    {
+        "file": "C:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\SimpleShooter.Build.cs",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "C:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\SimpleShooter.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "C:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\SimpleShooter.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "C:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\SimpleShooterGameModeBase.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "C:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\SimpleShooterGameModeBase.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\ShooterCharacter.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\ShooterCharacter.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    }
+]
