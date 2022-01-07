@@ -31,3 +31,8 @@ void AGun::Tick(float DeltaTime)
 
 }
 
+void AGun::PrimaryFire()
+{
+	UE_LOG(LogTemp, Warning, TEXT("SHOOTING..."));
+}
+

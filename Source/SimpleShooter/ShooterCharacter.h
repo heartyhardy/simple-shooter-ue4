@@ -27,6 +27,13 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	TSubclassOf<class AGun> GunClass;
+
+	UPROPERTY()
+	AGun* Gun;
+
 	void MoveForward(float AxisValue);
 	void MoveSideways(float AxisValue);
 	void LookUp(float AxisValue);
