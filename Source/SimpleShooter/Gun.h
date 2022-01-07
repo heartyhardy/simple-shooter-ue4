@@ -27,9 +27,12 @@ public:
 
 private:
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "General")
 	USceneComponent* Root;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "General")
 	class USkeletalMeshComponent* Mesh;
+
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	class UParticleSystem* MuzzleFlash;
 };

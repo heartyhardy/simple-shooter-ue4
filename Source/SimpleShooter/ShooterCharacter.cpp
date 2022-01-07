@@ -44,6 +44,7 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAxis(TEXT("LookSideways"), this, &AShooterCharacter::LookSideways);
 
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &AShooterCharacter::Jump);
+	PlayerInputComponent->BindAction(TEXT("PrimaryFire"), EInputEvent::IE_Pressed, this, &AShooterCharacter::PrimaryFire);
 }
 
 void AShooterCharacter::MoveForward(float AxisValue)
@@ -69,4 +70,10 @@ void AShooterCharacter::LookSideways(float AxisValue)
 void AShooterCharacter::Jump()
 {
 	ACharacter::Jump();
+}
+
+
+void AShooterCharacter::PrimaryFire()
+{
+	Gun->PrimaryFire();
 }

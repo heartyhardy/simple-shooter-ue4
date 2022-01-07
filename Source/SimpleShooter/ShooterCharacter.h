@@ -39,4 +39,5 @@ private:
 	void LookUp(float AxisValue);
 	void LookSideways(float AxisValue);
 	void Jump();
+	void PrimaryFire();
 };
