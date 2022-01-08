@@ -66,13 +66,13 @@ void AGun::PrimaryFire()
 		ECollisionChannel::ECC_GameTraceChannel1
 	);
 
-	if(bHit && BulletCollisionParticles)
+	if(bHit && BulletImpactParticles)
 	{
 		FVector BulletHitDirection = -Rotation.Vector();
 
 		UGameplayStatics::SpawnEmitterAtLocation(
 			GetWorld(),
-			BulletCollisionParticles,
+			BulletImpactParticles,
 			HitResult.Location,
 			BulletHitDirection.Rotation()
 		);
