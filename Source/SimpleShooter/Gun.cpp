@@ -76,23 +76,21 @@ void AGun::PrimaryFire()
 			HitResult.Location,
 			BulletHitDirection.Rotation()
 		);
-		// DrawDebugSphere(
-		// 	GetWorld(),
-		// 	HitResult.Location,
-		// 	5.f,
-		// 	16.f,
-		// 	FColor::Red,
-		// 	true
-		// );
+
+
+		AActor* ActorGotHit = HitResult.GetActor();
+
+		if(ActorGotHit)
+		{
+			FPointDamageEvent PrimaryAttackDamageEvent(PrimaryAttackDamage, HitResult, BulletHitDirection, nullptr);
+			
+			ActorGotHit->TakeDamage(
+				PrimaryAttackDamage, 
+				PrimaryAttackDamageEvent, 
+				GunOwnerController, 
+				this
+			);
+		}
 	}
-	// DrawDebugCamera(
-	// 	GetWorld(),
-	// 	Location,
-	// 	Rotation,
-	// 	90.0,
-	// 	2.0,
-	// 	FColor::Red,
-	// 	true
-	// );
 }
 
