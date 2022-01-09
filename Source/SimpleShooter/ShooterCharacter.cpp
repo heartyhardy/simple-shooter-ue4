@@ -17,6 +17,8 @@ AShooterCharacter::AShooterCharacter()
 void AShooterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	CurrentHealth = MaxHealth;
 	
 	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
 
@@ -33,6 +35,18 @@ void AShooterCharacter::Tick(float DeltaTime)
 
 }
 
+float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
+{
+	float DamageToApply = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+
+	DamageToApply = FMath::Min(CurrentHealth, DamageToApply);
+
+	CurrentHealth = CurrentHealth - DamageToApply > 0 ? CurrentHealth - DamageToApply : 0;
+	UE_LOG(LogTemp, Warning, TEXT("Current Health is: %f"), CurrentHealth);
+
+	return DamageToApply;
+}
+
 // Called to bind functionality to input
 void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -46,6 +60,12 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &AShooterCharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("PrimaryFire"), EInputEvent::IE_Pressed, this, &AShooterCharacter::PrimaryFire);
 }
+
+bool AShooterCharacter::IsAlive() const
+{
+	return CurrentHealth > 0;
+
+} 
 
 void AShooterCharacter::MoveForward(float AxisValue)
 {

@@ -23,8 +23,18 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser);
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	//Behaves like BlueprintCallable and more
+	//Pure blueprint nodes doesn't have execution pins
+	//It doesn't have any impact on the thing its calling only the result
+	//No matter how many times you call it, outputs the same result
+	//Stronger than const because doesn't change any state globally
+	UFUNCTION(BlueprintPure)
+	bool IsAlive() const;
 
 private:
 
@@ -33,6 +43,12 @@ private:
 
 	UPROPERTY()
 	AGun* Gun;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Health")
+	float MaxHealth;
+
+	UPROPERTY(VisibleAnywhere, Category = "Health")
+	float CurrentHealth;
 
 	void MoveForward(float AxisValue);
 	void MoveSideways(float AxisValue);
