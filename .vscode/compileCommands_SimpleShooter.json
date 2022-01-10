@@ -43,5 +43,15 @@
         "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\Gun.cpp",
         "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
         "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\ShooterAIController.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\ShooterAIController.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_SimpleShooter\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
     }
 ]
