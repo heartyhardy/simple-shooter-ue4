@@ -25,5 +25,5 @@ protected:
 private:
 
 	UPROPERTY(EditAnywhere, Category = "Combat")
-	float AcceptanceRadius = 200.f;
+	class UBehaviorTree* AIBehavior;
 };
