@@ -53,5 +53,45 @@
         "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\ShooterAIController.cpp",
         "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
         "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTTask_ClearBlackboardValue.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTTask_ClearBlackboardValue.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTTask_Shoot.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTTask_Shoot.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTService_PlayerLocation.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTService_PlayerLocation.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTService_PlayerLocationOnSight.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTService_PlayerLocationOnSight.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
     }
 ]

@@ -27,9 +27,6 @@ void AShooterAIController::BeginPlay()
 void AShooterAIController::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-
-
-
 }
 
 // This isn't needed anymore because we are using behavior trees

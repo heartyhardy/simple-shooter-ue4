@@ -58,6 +58,11 @@ void AGun::PrimaryFire()
 	FVector GunMaxRange = Location + Rotation.Vector() * MaxRange;
 
 	FHitResult HitResult;
+	FCollisionQueryParams CollisionParams;
+
+	//Exclude Gun and Character from collison or it will shoot itself
+	CollisionParams.AddIgnoredActor(this);
+	CollisionParams.AddIgnoredActor(GetOwner());
 
 	bool bHit = GetWorld()->LineTraceSingleByChannel(
 		HitResult,

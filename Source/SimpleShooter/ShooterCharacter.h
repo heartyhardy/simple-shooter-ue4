@@ -36,6 +36,8 @@ public:
 	UFUNCTION(BlueprintPure)
 	bool IsAlive() const;
 
+	void PrimaryFire();
+
 private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
@@ -55,5 +57,5 @@ private:
 	void LookUp(float AxisValue);
 	void LookSideways(float AxisValue);
 	void Jump();
-	void PrimaryFire();
+
 };
