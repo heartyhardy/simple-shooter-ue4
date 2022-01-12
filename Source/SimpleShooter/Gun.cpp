@@ -68,7 +68,8 @@ void AGun::PrimaryFire()
 		HitResult,
 		Location,
 		GunMaxRange,
-		ECollisionChannel::ECC_GameTraceChannel1
+		ECollisionChannel::ECC_GameTraceChannel1,
+		CollisionParams
 	);
 
 	if(bHit && BulletImpactParticles)
