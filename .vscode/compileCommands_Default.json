@@ -93,5 +93,25 @@
         "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\BTService_PlayerLocationOnSight.cpp",
         "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
         "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\KillemAllGameMode.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\KillemAllGameMode.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\ShooterPlayerController.h",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "c:\\\\Users\\\\chari\\\\Documents\\\\Unreal Projects\\\\SimpleShooter\\\\Source\\\\SimpleShooter\\\\ShooterPlayerController.cpp",
+        "command": "cl.exe @\"C:\\Users\\chari\\Documents\\Unreal Projects\\SimpleShooter\\.vscode\\compileCommands_Default\\SimpleShooter.210.rsp\"",
+        "directory": "C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Source"
     }
 ]
