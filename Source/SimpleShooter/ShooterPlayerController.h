@@ -20,6 +20,9 @@ public:
 
 private:
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> LoseScreen;
+
 	UPROPERTY(EditAnywhere, Category = "Game")
 	float RestartTime = 3.f;
 
