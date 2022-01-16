@@ -21,6 +21,9 @@ public:
 private:
 
 	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> WinScreen;
+
+	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UUserWidget> LoseScreen;
 
 	UPROPERTY(EditAnywhere, Category = "Game")
