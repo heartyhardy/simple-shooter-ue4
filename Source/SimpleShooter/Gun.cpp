@@ -6,6 +6,7 @@
 #include "Particles/ParticleSystem.h"
 #include "Kismet/GameplayStatics.h"
 #include "DrawDebugHelpers.h"
+#include "GameFramework/Controller.h"
 
 #define out
 
@@ -44,51 +45,39 @@ void AGun::PrimaryFire()
 		TEXT("MuzzleFlashSocket")
 	);
 
-	APawn* GunOwner = Cast<APawn>(GetOwner());
-	if(!GunOwner) return;
-
-	AController* GunOwnerController = GunOwner->GetController();
-	if(!GunOwnerController) return;
-
-	FVector Location;
-	FRotator Rotation;
-
-	GunOwnerController->GetPlayerViewPoint(out Location, out Rotation);
-
-	FVector GunMaxRange = Location + Rotation.Vector() * MaxRange;
-
-	FHitResult HitResult;
-	FCollisionQueryParams CollisionParams;
-
-	//Exclude Gun and Character from collison or it will shoot itself
-	CollisionParams.AddIgnoredActor(this);
-	CollisionParams.AddIgnoredActor(GetOwner());
-
-	bool bHit = GetWorld()->LineTraceSingleByChannel(
-		HitResult,
-		Location,
-		GunMaxRange,
-		ECollisionChannel::ECC_GameTraceChannel1,
-		CollisionParams
+	UGameplayStatics::SpawnSoundAttached(
+		MuzzleSound,
+		Mesh,
+		TEXT("MuzzleFlashSocket")
 	);
+
+	FVector ShotDirection;
+	FHitResult Hit;
+	bool bHit = GunTrace(Hit, ShotDirection);
 
 	if(bHit && BulletImpactParticles)
 	{
-		FVector BulletHitDirection = -Rotation.Vector();
-
 		UGameplayStatics::SpawnEmitterAtLocation(
 			GetWorld(),
 			BulletImpactParticles,
-			HitResult.Location,
-			BulletHitDirection.Rotation()
+			Hit.Location,
+			ShotDirection.Rotation()
 		);
 
+		UGameplayStatics::SpawnSoundAtLocation(
+			GetWorld(),
+			ImpactSound,
+			Hit.Location,
+			ShotDirection.Rotation()
+		);
 
-		AActor* ActorGotHit = HitResult.GetActor();
+		AActor* ActorGotHit = Hit.GetActor();
 
 		if(ActorGotHit)
 		{
-			FPointDamageEvent PrimaryAttackDamageEvent(PrimaryAttackDamage, HitResult, BulletHitDirection, nullptr);
+			FPointDamageEvent PrimaryAttackDamageEvent(PrimaryAttackDamage, Hit, ShotDirection, nullptr);
+			
+			AController* GunOwnerController = GetGunController();
 			
 			ActorGotHit->TakeDamage(
 				PrimaryAttackDamage, 
@@ -100,3 +89,44 @@ void AGun::PrimaryFire()
 	}
 }
 
+bool AGun::GunTrace(FHitResult& Hit, FVector& ShotDirection)
+{
+
+	AController* GunOwnerController = GetGunController();
+
+	if(!GunOwnerController) return false;
+
+	FVector Location;
+	FRotator Rotation;
+
+	GunOwnerController->GetPlayerViewPoint(out Location, out Rotation);
+	
+	ShotDirection = -Rotation.Vector();
+
+	FVector GunMaxRange = Location + Rotation.Vector() * MaxRange;
+
+	FCollisionQueryParams CollisionParams;
+
+	//Exclude Gun and Character from collison or it will shoot itself
+	CollisionParams.AddIgnoredActor(this);
+	CollisionParams.AddIgnoredActor(GetOwner());
+
+	bool bHit = GetWorld()->LineTraceSingleByChannel(
+		Hit,
+		Location,
+		GunMaxRange,
+		ECollisionChannel::ECC_GameTraceChannel1,
+		CollisionParams
+	);
+
+	return bHit;
+}
+
+AController* AGun::GetGunController() const
+{
+	APawn* GunOwner = Cast<APawn>(GetOwner());
+	if(!GunOwner) return nullptr;
+
+	AController* GunOwnerController = GunOwner->GetController();
+	return GunOwnerController;
+}
