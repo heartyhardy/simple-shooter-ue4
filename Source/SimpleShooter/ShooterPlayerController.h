@@ -18,7 +18,14 @@ public:
 
 	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 
+protected:
+
+	virtual void BeginPlay() override;
+
 private:
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> Crosshairs;
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UUserWidget> WinScreen;
@@ -28,6 +35,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Game")
 	float RestartTime = 3.f;
+
+	UPROPERTY()
+	class UUserWidget* HUD;
 
 	FTimerHandle RestartTimer;
 };

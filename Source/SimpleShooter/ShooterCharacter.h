@@ -36,6 +36,9 @@ public:
 	UFUNCTION(BlueprintPure)
 	bool IsAlive() const;
 
+	UFUNCTION(BlueprintPure)
+	float HealthAsPercentage() const;
+
 	void PrimaryFire();
 
 private:

@@ -22,9 +22,9 @@ void UBTService_PlayerLocationOnSight::TickNode(UBehaviorTreeComponent& OwnerCom
 
     if(OwnerComp.GetAIOwner()->LineOfSightTo(PlayerPawn))
     {
-        OwnerComp.GetBlackboardComponent()->SetValueAsVector(
+        OwnerComp.GetBlackboardComponent()->SetValueAsObject(
             GetSelectedBlackboardKey(),
-            PlayerPawn->GetActorLocation()
+            PlayerPawn
         );
     }
     else
